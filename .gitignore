@@ -82,5 +82,5 @@ typings/
 dist*/
 package-lock.json
 
-!dist/app.css
-!dist/app.user.css
+!dist*/app.css
+!dist*/app.user.css
