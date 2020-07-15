@@ -1,5 +1,6 @@
 let mix = require('laravel-mix');
-var imageInliner = require('postcss-image-inliner');
+const fs = require('fs');
+const imageInliner = require('postcss-image-inliner');
 
 /*
  |--------------------------------------------------------------------------
@@ -26,6 +27,10 @@ mix
 mix.setPublicPath('dist');
 mix.sass('src/main.scss', 'dist/app.css');
 mix.setResourceRoot('src/');
+mix.then(() => {
+    const appCss = fs.readFileSync('dist/app.css').toString();
+    fs.writeFileSync('dist/app.user.css', `@-moz-document url-prefix("https://nulledbb.com"), url-prefix("http://nulledbb.com") {\n${appCss}\n}`);
+});
 global.Mix.manifest.refresh = _ => void 0;
 // mix.webpackConfig({
 //   module: {
