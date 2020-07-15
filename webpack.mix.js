@@ -16,7 +16,7 @@ mix
     processCssUrls: true,
     postCss: [
       imageInliner({
-        assetPaths: ['src/themes'],
+        assetPaths: ['src'],
         maxFileSize: 1024 * 1024 * 10,
         b64Svg: true,
         strict: false
