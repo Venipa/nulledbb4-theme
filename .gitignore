@@ -1,6 +1,3 @@
-!dist/app.css
-!dist/app.user.css
-
 # Logs
 logs
 *.log
@@ -84,3 +81,6 @@ typings/
 
 dist*/
 package-lock.json
+
+!dist/app.css
+!dist/app.user.css
