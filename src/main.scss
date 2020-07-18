@@ -1,23 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   margin: 0;
 }
 
 :root {
-  --nulledBackground:#181819;
-  --nulledCard:#19191a;
-  --nulledPrimary:#ad30cf;
-  --nulledSecondary:rgba(255, 255, 255, 0.125);
-  --nulledDark:#121213;
-  --nulledBorder:#303030;
-  --nulledDanger:#cf2d2d;
-  --nulledWarning:#ffee58;
+  --nulledBackground: #181819;
+  --nulledCard: #19191a;
+  --nulledPrimary: #ad30cf;
+  --nulledSecondary: rgba(255, 255, 255, 0.125);
+  --nulledDark: #121213;
+  --nulledBorder: #303030;
+  --nulledDanger: #cf2d2d;
+  --nulledWarning: #ffee58;
 }
 
 .postbit_background_container > .postbit_background.uid4865::before {
-  box-shadow: inset 0 -48px 48px -20px #282828, inset 0 26px 10px -20px crimson, inset -26px 0 10px -20px crimson, inset 26px 0 10px -20px crimson;
+  box-shadow: inset 0 -48px 48px -20px #282828, inset 0 26px 10px -20px crimson,
+    inset -26px 0 10px -20px crimson, inset 26px 0 10px -20px crimson;
 }
 
 .author_avatar > a {
@@ -113,7 +114,10 @@ body {
     overflow: hidden;
     border-radius: 4px;
     width: 168px;
-    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+      0 100px 80px rgba(0, 0, 0, 0.07);
   }
 
   .profile-cover {
@@ -122,7 +126,8 @@ body {
 }
 
 .postbit_background_container > .postbit_background.uid4865::before {
-  box-shadow: inset 0 -48px 48px -20px #282828, inset 0 26px 10px -20px crimson, inset -26px 0 10px -20px crimson, inset 26px 0 10px -20px crimson;
+  box-shadow: inset 0 -48px 48px -20px #282828, inset 0 26px 10px -20px crimson,
+    inset -26px 0 10px -20px crimson, inset 26px 0 10px -20px crimson;
 }
 
 .mobile-hide {
@@ -185,12 +190,24 @@ body {
   }
 }
 
-.topmenu li i, .colored, .subforum_minion, .footer-title, a:hover, .forms .checkbox input + i:after, legend, .footer-link a:hover i {
+.topmenu li i,
+.colored,
+.subforum_minion,
+.footer-title,
+a:hover,
+.forms .checkbox input + i:after,
+legend,
+.footer-link a:hover i {
   color: var(--nulledPrimary) !important;
 }
 
 .thread_status {
-  &.dot_newfolder:before, &.dot_newhotfolder:before, &.newfolder:before, &.newhotfolder:before, &.newlockfolder:before, &.newclosefolder:before {
+  &.dot_newfolder:before,
+  &.dot_newhotfolder:before,
+  &.newfolder:before,
+  &.newhotfolder:before,
+  &.newlockfolder:before,
+  &.newclosefolder:before {
     color: var(--nulledPrimary) !important;
   }
 }
@@ -199,17 +216,43 @@ body {
   color: var(--nulledPrimary) !important;
 }
 
-.forum-head, .modal-head, .selected, .head-mobile, .tabs-button, .active, .pages-link:hover, button:hover, input.button:hover, .button:hover, .forms .toggle i:before, .color-box, .tab:hover, .bottom-menu, .showthread-container, .index-button:hover, .threadlist-button-m, .thread-unread:hover, .prefooter, .postbit-button:hover {
+.forum-head,
+.modal-head,
+.selected,
+.head-mobile,
+.tabs-button,
+.active,
+.pages-link:hover,
+button:hover,
+input.button:hover,
+.button:hover,
+.forms .toggle i:before,
+.color-box,
+.tab:hover,
+.bottom-menu,
+.showthread-container,
+.index-button:hover,
+.threadlist-button-m,
+.thread-unread:hover,
+.prefooter,
+.postbit-button:hover {
   background: var(--nulledPrimary) !important;
 }
 
 .sceditor-button {
-  &:hover, &:active, &.active {
+  &:hover,
+  &:active,
+  &.active {
     background: var(--nulledPrimary) !important;
   }
 }
 
-.upgrade-button:hover, .loading, .notifications-count-m, .backtotop, .messages-start:hover, .ucpnavm-head {
+.upgrade-button:hover,
+.loading,
+.notifications-count-m,
+.backtotop,
+.messages-start:hover,
+.ucpnavm-head {
   background: var(--nulledPrimary) !important;
 }
 
@@ -221,11 +264,21 @@ ul.pages li a:hover {
   }
 }
 
-.marketplace-balance-button:hover, .staffpage-button:hover, .credits-rewards-col1 .rewards-icon, .mobile-header, .forums-header, .premium-button, .premium-icon i, .forms .radio input + i:after, .inbox-count {
+.marketplace-balance-button:hover,
+.staffpage-button:hover,
+.credits-rewards-col1 .rewards-icon,
+.mobile-header,
+.forums-header,
+.premium-button,
+.premium-icon i,
+.forms .radio input + i:after,
+.inbox-count {
   background: var(--nulledPrimary) !important;
 }
 
-.tab:hover, .selected, .copyright {
+.tab:hover,
+.selected,
+.copyright {
   border-color: var(--nulledPrimary) !important;
 }
 
@@ -235,11 +288,14 @@ ul.pages li a:hover {
   border-radius: 0 !important;
   position: relative;
 
-  &:hover:before, &.selected:before {}
+  &:hover:before,
+  &.selected:before {
+  }
 }
 
-.profile-wrapper .tools .cover-button:before, .tabs > .tab:before {
-  content: '';
+.profile-wrapper .tools .cover-button:before,
+.tabs > .tab:before {
+  content: "";
   bottom: 0;
   height: 2px;
   width: 33%;
@@ -251,7 +307,7 @@ ul.pages li a:hover {
   right: 0;
   position: absolute;
   background-color: #fff;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   transition-property: width, opacity, background, box-shadow;
   box-shadow: 0 -2px 8px 1px #fff;
 }
@@ -264,7 +320,8 @@ ul.pages li a:hover {
 }
 
 .tabs > .tab {
-  &:hover:before, &.selected:before {
+  &:hover:before,
+  &.selected:before {
     width: 50%;
     opacity: 1;
     background-color: #fff;
@@ -273,7 +330,8 @@ ul.pages li a:hover {
 }
 
 .profile-wrapper .tools .cover-button {
-  &:active:before, &:focus:before {
+  &:active:before,
+  &:focus:before {
     width: 66%;
     opacity: 1;
     background-color: var(--nulledPrimary);
@@ -293,7 +351,8 @@ ul.pages li a:hover {
   margin: 0;
 }
 
-.mycode_quote, .codeblock {
+.mycode_quote,
+.codeblock {
   background: var(--nulledDark);
   padding: 10px;
   border-left: 1px solid var(--nulledPrimary);
@@ -313,7 +372,7 @@ ul.pages li a:hover {
         flex-shrink: 0;
       }
 
-      &:nth-child(1) > .postbit-user div[class^='postbit-triangle'] {
+      &:nth-child(1) > .postbit-user div[class^="postbit-triangle"] {
         display: none;
       }
     }
@@ -327,7 +386,8 @@ ul.pages li a:hover {
 
 /* remove shadows */
 
-.wrap, .container {
+.wrap,
+.container {
   box-shadow: none;
 }
 
@@ -375,7 +435,7 @@ ul.pages li a:hover {
 
       > span {
         background: rgba(255, 255, 255, 0.05) !important;
-        transition: all .2s ease;
+        transition: all 0.2s ease;
         transition-property: background;
       }
 
@@ -393,8 +453,12 @@ ul.pages li a:hover {
   box-shadow: 0 0 0px 1px var(--nulledBorder);
 
   &::after {
-    opacity: .65;
-    background: linear-gradient(to bottom, transparent, var(--nulledDark)) !important;
+    opacity: 0.65;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--nulledDark)
+    ) !important;
   }
 
   height: auto;
@@ -436,13 +500,13 @@ ul.pages li a:hover {
         width: 64px;
 
         &:before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
           height: 100%;
           width: 100%;
-          background-image: url(/assets/img/logo.svg);
+          background-image: url(https://nulledbb.com/assets/img/logo.svg);
 
           /*     background-image: url(/assets/img/brand/logo_transparent.png); */
           background-size: contain;
@@ -471,7 +535,9 @@ ul.pages li a:hover {
         cursor: pointer;
       }
 
-      &:focus-within .input, &:active .input, &:hover .input {
+      &:focus-within .input,
+      &:active .input,
+      &:hover .input {
         background-color: rgba(255, 255, 255, 0.045);
         border: 1px solid rgba(255, 255, 255, 0.035);
       }
@@ -495,13 +561,40 @@ ul.pages li a:hover {
 .forum-wrap {
   .container {
     margin-top: 0;
+    > .forumdisplay-major > .wrapper > .forums-subforums {
+      background-color: rgba(#fff, .03)!important;
+    }
+    > .wrapper {
+      border-width: 0;
+      > div > .row {
+        background-color: var(--nulledBackground);
+        border-bottom-width: 0;
+        position: relative;
+        a[href^="misc.php?action=help"] {
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: color .125s ease;
+          }
+          &:hover {
+            &:before {
+              background-color: rgba(#fff, 0.02);
+            }
+          }
+        }
+      }
+    }
   }
-
   > .wrap > .container > .nav-wrapper {
     li {
       background-color: transparent;
 
-      &:before, &:last-child:after {
+      &:before,
+      &:last-child:after {
         display: none;
       }
 
@@ -555,7 +648,7 @@ div#latestthreads {
         }
 
         &:before {
-          content: '';
+          content: "";
           bottom: 0;
           height: 2px;
           width: 33%;
@@ -567,7 +660,7 @@ div#latestthreads {
           right: 0;
           position: absolute;
           background-color: #fff;
-          transition: all .2s ease;
+          transition: all 0.2s ease;
           transition-property: width, opacity, background, box-shadow;
           box-shadow: 0 -2px 8px 1px #fff;
         }
@@ -615,11 +708,15 @@ div#latestthreads {
 }
 
 .postbit_background_container > .postbit_background.uid4865::before {
-  box-shadow: inset 0 -48px 48px -20px var(--nulledCard), inset 0 26px 10px -20px crimson, inset -26px 0 10px -20px crimson, inset 26px 0 10px -20px crimson;
+  box-shadow: inset 0 -48px 48px -20px var(--nulledCard),
+    inset 0 26px 10px -20px crimson, inset -26px 0 10px -20px crimson,
+    inset 26px 0 10px -20px crimson;
 }
 
 .forms {
-  .input input, .select select, .textarea textarea {
+  .input input,
+  .select select,
+  .textarea textarea {
     background-color: var(--nulledDark) !important;
   }
 }
@@ -631,7 +728,8 @@ div#latestthreads {
 }
 
 .postbit-container > .wrapper > .table-wrap:nth-child(1) > {
-  .postbit-user, .postbit-message {
+  .postbit-user,
+  .postbit-message {
     background-color: var(--nulledBackground) !important;
 
     /*     background-color: rgba(200, 200, 200, .015)!important; */
@@ -639,14 +737,16 @@ div#latestthreads {
 }
 
 .postbit-mobile-container > {
-  .postbit-mobile-message, .postbit-mobile-message-author {
+  .postbit-mobile-message,
+  .postbit-mobile-message-author {
     background-color: var(--nulledBackground) !important;
 
     /*     background-color: rgba(200, 200, 200, .015)!important; */
   }
 }
 
-.postbit-container > .wrapper > .table-wrap:nth-child(2), .forum-wrap > .wrap > .container > .nav-wrapper {
+.postbit-container > .wrapper > .table-wrap:nth-child(2),
+.forum-wrap > .wrap > .container > .nav-wrapper {
   background-color: var(--nulledBackground) !important;
 
   /*     background-color: rgba(200, 200, 200, .015)!important; */
@@ -670,7 +770,8 @@ form#quick_reply_form .wrapper {
   }
 }
 
-div#forums .forums-header {
+div#forums .forums-header,
+.wrapper > .forum-head {
   background-color: var(--nulledBackground) !important;
 
   /*     background-color: rgba(200, 200, 200, .015)!important; */
@@ -684,15 +785,45 @@ div#forums .forums-header {
   }
 
   &.spacer-top-10 > {
-    .forums-row, .forums-header {
+    .forums-row,
+    .forums-header {
       background-color: var(--nulledBackground) !important;
 
       /*     background-color: rgba(200, 200, 200, .015)!important; */
     }
   }
 }
-
-.wrapper > .forum-cat + .table-wrap > .forumdisplay-row, .forumdisplay-row, .search-t-row {
+.table-cell-top {
+  > .wrapper,
+  > .wrapper ~ .col-50 > div > .wrapper {
+    border: 0;
+  }
+  > .wrapper > .forum-cat-rounded,
+  > .wrapper > .forum-cat-rounded + .row,
+  > .wrapper ~ .col-50 > div > .wrapper > .forum-cat-rounded ~ .row,
+  > .wrapper ~ .col-50 > div > .wrapper > .forum-cat-rounded {
+    background-color: var(--nulledBackground) !important;
+    &:not([class^="forum-cat"]) {
+      border-bottom-width: 0;
+    }
+  }
+}
+.usercp-menu.usercp-account-items,
+.usercp-menu.usercp-profile-items,
+.usercp-menu.usercp-extras-items,
+.usercp-menu.usercp-misc-items {
+  > a > li {
+    background-color: var(--nulledBackground) !important;
+    border: 0;
+    color: #dfdfdf;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+.wrapper > .forum-cat + .table-wrap > .forumdisplay-row,
+.forumdisplay-row,
+.search-t-row {
   background-color: var(--nulledBackground) !important;
 
   /*     background-color: rgba(200, 200, 200, .015)!important; */
@@ -714,9 +845,9 @@ div#forums .forums-header {
       left: 0;
       right: 0;
       bottom: 0;
-      content: '';
+      content: "";
       z-index: -1;
-      opacity: .425;
+      opacity: 0.425;
     }
   }
 }
@@ -732,7 +863,7 @@ div#forums .forums-header {
   }
 
   &:before {
-    content: '';
+    content: "";
     background-color: var(--nulledPrimary);
     height: 6px;
     width: 6px;
@@ -757,7 +888,8 @@ div#forums .forums-header {
 }
 
 .profile-wrapper + .table-wrap .wrapper {
-  .row, .row-alt {
+  .row,
+  .row-alt {
     background-color: var(--nulledDark) !important;
   }
 
@@ -807,7 +939,8 @@ form#quick_reply_form .wrapper {
       flex-direction: row;
     }
 
-    .postbit-contact, .postbit-options {
+    .postbit-contact,
+    .postbit-options {
       background-color: transparent;
       border: 0;
     }
@@ -841,7 +974,7 @@ form#quick_reply_form .wrapper {
 
   .postbit-button {
     border-radius: 0;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
   }
 }
 
@@ -864,7 +997,7 @@ form#quick_reply_form .wrapper {
       line-height: 32px;
       text-align: left;
       padding: 0 16px;
-      transition: all .2s ease;
+      transition: all 0.2s ease;
       transition-property: color, background;
     }
 
@@ -889,7 +1022,7 @@ div#forums {
 
       .forums-col1 > .title {
         font-weight: 600;
-        letter-spacing: .085em;
+        letter-spacing: 0.085em;
       }
     }
 
@@ -918,12 +1051,12 @@ div#forums {
         max-height: initial;
         height: auto;
         padding: 0 16px;
-        transition: all .125s ease-out;
+        transition: all 0.125s ease-out;
         transition-property: color, background-color;
         color: rgba(255, 255, 255, 0.65);
 
         .subforumicon + a {
-          transition: all .125s ease-out;
+          transition: all 0.125s ease-out;
           transition-property: color, background-color;
           color: rgba(255, 255, 255, 0.65);
         }
@@ -957,7 +1090,8 @@ div#forums {
           }
         }
 
-        &:not(:last-child) {}
+        &:not(:last-child) {
+        }
       }
 
       &:not(:last-child) {
@@ -971,7 +1105,8 @@ div#forums {
   }
 
   > div[id^="cat"] {
-    box-shadow: 0 1.8px 2.6px rgba(0, 0, 0, 0.1), 0 6px 8.7px rgba(0, 0, 0, 0.06), 0 27px 39px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1.8px 2.6px rgba(0, 0, 0, 0.1),
+      0 6px 8.7px rgba(0, 0, 0, 0.06), 0 27px 39px rgba(0, 0, 0, 0.04);
   }
 }
 
@@ -1011,7 +1146,7 @@ div#forums {
     > a > button.thread-button {
       background-color: rgba(200, 200, 200, 0.035) !important;
       border: 1px solid rgba(200, 200, 200, 0.035) !important;
-      transition: all .2s ease;
+      transition: all 0.2s ease;
       transition-property: color, background-color, border-color;
       height: 32px;
       line-height: 1;
@@ -1056,7 +1191,7 @@ div#forums {
 
   li {
     border-right: 0;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     transition-property: background;
     position: relative;
     padding: 0 20px;
@@ -1080,7 +1215,7 @@ div#forums {
 
 .topmenu li {
   &:before {
-    content: '';
+    content: "";
     top: 0;
     height: 2px;
     width: 33%;
@@ -1092,7 +1227,7 @@ div#forums {
     right: 0;
     position: absolute;
     background-color: #fff;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
     transition-property: width, opacity, background, box-shadow;
     box-shadow: 0 -2px 8px 1px #fff;
   }
@@ -1105,7 +1240,11 @@ div#forums {
       box-shadow: 0 -2px 8px 1px var(--nulledPrimary);
     }
 
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) -250%, rgba(255, 255, 255, 0)) !important;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1) -250%,
+      rgba(255, 255, 255, 0)
+    ) !important;
     color: rgba(255, 255, 255, 0.95);
   }
 }
@@ -1132,7 +1271,7 @@ div#forums {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: all .125s ease;
+    transition: all 0.125s ease;
     transition-property: color, background-color, border-color;
 
     > span {
@@ -1146,7 +1285,9 @@ div#forums {
   }
 }
 
-.sidebar- > .spacer-left-5 > .wrapper:first-child, .forum-head#green, .sidebar- > .spacer-left-5 > .wrapper:first-child .credits-weekly {
+.sidebar- > .spacer-left-5 > .wrapper:first-child,
+.forum-head#green,
+.sidebar- > .spacer-left-5 > .wrapper:first-child .credits-weekly {
   background-color: var(--nulledBackground) !important;
   border-width: 0 !important;
 }
@@ -1165,13 +1306,17 @@ div#forums {
   width: initial;
 }
 
-.profile-comments-button, .button, button, input.button {
+.profile-comments-button,
+.button,
+button,
+input.button {
   white-space: nowrap;
   display: inline-block;
   height: 32px;
   line-height: 32px;
   padding: 0 14px;
-  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+    0 1px 3px rgba(0, 0, 0, 0.08);
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   background: var(--nulledCard);
   border-radius: 4px;
@@ -1179,21 +1324,24 @@ div#forums {
   font-weight: 600;
   text-transform: uppercase;
   font-family: inherit;
-  letter-spacing: .125em;
+  letter-spacing: 0.125em;
   color: rgba(255, 255, 255, 0.65) !important;
   text-decoration: none;
-  transition: all .15s ease;
+  transition: all 0.15s ease;
   transition-property: color, background-color, transform, box-shadow;
 }
 
-.button:hover, button:hover, input.button:hover {
+.button:hover,
+button:hover,
+input.button:hover {
   background-color: var(--nulledSecondary) !important;
   transform: translateY(-1px);
   box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
 .topmenu {
-  .menu-dropdown-content, .drop {
+  .menu-dropdown-content,
+  .drop {
     margin-top: 0px !important;
     top: 42px;
     transition-duration: 0s !important;
@@ -1231,13 +1379,15 @@ div#forums {
 
 .topmenu {
   .menu-dropdown-content {
-    &:before, &:after {
+    &:before,
+    &:after {
       display: none;
     }
   }
 
   .drop {
-    &:before, &:after {
+    &:before,
+    &:after {
       display: none;
     }
   }
@@ -1253,7 +1403,7 @@ div#forums {
   padding-left: 38px;
 
   &:before {
-    content: '';
+    content: "";
     box-shadow: inset 0 0 0px 1px var(--nulledPrimary);
     position: absolute;
     top: 0;
@@ -1261,10 +1411,12 @@ div#forums {
     right: 0;
     bottom: 0;
     border-radius: inherit;
-    opacity: .425;
+    opacity: 0.425;
   }
 
-  &#red, &#green, &#orange {
+  &#red,
+  &#green,
+  &#orange {
     background-color: var(--nulledBackground) !important;
   }
 
@@ -1273,7 +1425,7 @@ div#forums {
   }
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 0;
