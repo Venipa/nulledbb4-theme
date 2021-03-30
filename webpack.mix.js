@@ -49,7 +49,16 @@ mix.then(() => {
   const appCss = fs.readFileSync("dist/app.css").toString();
   fs.writeFileSync(
     "dist/app.user.css",
-    `@-moz-document regexp("^https:\\/\\/nulledbb.com[/](.*)") {\n${appCss}\n}`
+    `/* ==UserStyle==
+@name         NulledBB 4 - Theme
+@namespace    venipa.net
+@author       Venipa <admin@venipa.net>
+@version      0.1.0
+@license      MIT
+@updateUrl    https://venipa.github.io/nulledbb4-theme/dist/app.user.css
+@preprocessor default
+==/UserStyle== */
+    @-moz-document regexp("^https:\\/\\/nulledbb.com[/](.*)") {\n${appCss}\n}`
   );
   const appJs = fs.readFileSync("dist/app.js").toString();
   fs.writeFileSync(
@@ -61,6 +70,7 @@ mix.then(() => {
     // @description  replaces some jquery stuff with better stuff
     // @author       Venipa <admin@venipa.net>
     // @match        https://nulledbb.com/*
+    // @updateUrl    https://venipa.github.io/nulledbb4-theme/dist/app.user.js
     // @grant        none
     // ==/UserScript==
     
