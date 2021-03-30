@@ -1,5 +1,5 @@
 @import "./mixins.scss";
-
+@import '~tippy.js/dist/tippy.css';
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
 body {
@@ -234,6 +234,54 @@ body.showthread::after {
         height: 140px;
         width: 140px;
       }
+    }
+  }
+}
+.tippy-box[data-theme="discord"] {
+  /* Your styling here. Example: */
+  background-color: black;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.5);
+  &[data-placement="top"] .tippy-arrow {
+    filter: drop-shadow(0 2px 16px 0 rgba(0, 0, 0, 0.5));
+  }
+  &[data-placement="bottom"] .tippy-arrow {
+    filter: drop-shadow(0 2px 16px 0 rgba(0, 0, 0, 0.5));
+  }
+  &[data-animation="discord-anim"][data-placement^="top"] {
+    transform-origin: center !important;
+    &[data-state="hidden"] {
+      opacity: 0;
+      transform: scale(0.9) translateY(-11px);
+    }
+    &[data-state="visible"] {
+      transform: scale(1) translateY(-11px);
+    }
+  }
+  &[data-animation="discord-anim"][data-placement="bottom"] {
+    &[data-state="hidden"] {
+      opacity: 0;
+      transform: scale(0.9) translateY(11px);
+    }
+    &[data-state="visible"] {
+      transform: scale(1) translateY(11px);
+    }
+  }
+  &[data-inertia][data-state="visible"] {
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .tippy-arrow {
+    color: black;
+  }
+  .tippy-content {
+    padding: 5px 8px;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    font-size: 0.965em;
+
+    h2 {
+      margin: 0;
+      margin-bottom: 8px;
     }
   }
 }

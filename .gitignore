@@ -79,8 +79,12 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
+
 dist*/
+dist/
 package-lock.json
 
 !dist*/app.css
 !dist*/app.user.css
+!dist*/app.js
+!dist*/app.user.js

@@ -24,6 +24,7 @@ mix.options({
   ],
 });
 mix.setPublicPath("dist");
+mix.js("src/main.js", "dist/app.js");
 mix.sass("src/main.scss", "dist/app.css");
 mix.setResourceRoot("src/");
 mix.browserSync({
@@ -34,14 +35,14 @@ mix.browserSync({
   snippetOptions: {
     rule: {
       match: /<\/head>/i,
-      fn: function(snippet, match) {
-        return (
-          '<link rel="stylesheet" type="text/css" href="/app.css"/>' +
+      fn: function (snippet, match) {
+        return (`<link rel="stylesheet" type="text/css" href="/app.css" />
+        <script src="/app.js" type="text/javascript"></script>` +
           snippet +
           match
         );
       },
-    },
+    }
   },
 });
 mix.then(() => {
@@ -49,6 +50,25 @@ mix.then(() => {
   fs.writeFileSync(
     "dist/app.user.css",
     `@-moz-document regexp("^https:\\/\\/nulledbb.com[/](.*)") {\n${appCss}\n}`
+  );
+  const appJs = fs.readFileSync("dist/app.js").toString();
+  fs.writeFileSync(
+    "dist/app.user.js",
+    `// ==UserScript==
+    // @name         NulledBB4 - Enhancements
+    // @namespace    https://venipa.net/
+    // @version      0.1
+    // @description  replaces some jquery stuff with better stuff
+    // @author       Venipa <admin@venipa.net>
+    // @match        https://nulledbb.com/*
+    // @grant        none
+    // ==/UserScript==
+    
+    (function() {
+        'use strict';
+    
+        ${appJs}
+    })();`
   );
 });
 global.Mix.manifest.refresh = (_) => void 0;
