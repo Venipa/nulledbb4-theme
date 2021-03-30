@@ -8,21 +8,36 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
   <title>NulledBB V4 Theme</title>
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+        rel="stylesheet">
   <style>
+    html,
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Nunito, Roboto, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     }
 
   </style>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+        rel="stylesheet">
 </head>
 
 <body>
-  <div id="app">
-    <h1>NulledBB V4 Theme</h1>
-    <div>
-      <div><a href="./dist/app.user.js">JS Enhancements</a>
+  <div id="app"
+       class="container mx-auto">
+    <div class="mx-4 my-4 md:my-8 md:mx-0">
+      <h1 class="text-3xl font-bold">NulledBB V4 Theme</h1>
+      <div class="my-4 flex flex-col">
+        <a href="./dist/app.user.js"
+           class="text-blue-600 hover:text-blue-800">JS Enhancements</a>
+        <a href="./dist/app.user.css"
+           class="text-blue-600 hover:text-blue-800">User CSS</a>
       </div>
-      <div><a href="./dist/app.user.css">User CSS</a></div>
+      <div class="bg-gray-300 h-px my-4"></div>
+      <h1 class="text-xl font-bold mb-4">NulledBB Custom CSS Feature</h1>
+      <pre style="background: #f0f0f0!important; padding: 4px; display: inline-block;">@import url(https://venipa.github.io/nulledbb4-theme/dist/app.css);</pre>
+      <p>put this line in your custom css file</p>
     </div>
   </div>
 </body>
