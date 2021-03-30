@@ -16,33 +16,32 @@ body.forumdisplay::after,
 body.showthread::after {
   background: linear-gradient(to bottom, transparent 75%, #0a0a0a 100%);
 }
-.dropdown-menu[aria-labelledby="headerDropdownUser"]
+.dropdown-menu {
+  &[aria-labelledby="headerDropdownUser"] .dropdown-item:first-of-type {
+    height: initial;
+    padding: 0.75rem 1.25rem !important;
+    line-height: initial;
+    margin-top: 6px;
+  }
   .dropdown-item:first-of-type {
-  height: initial;
-  padding: 0.75rem 1.25rem !important;
-  line-height: initial;
-  margin-top: 6px;
-}
-.dropdown-menu .dropdown-item:first-of-type {
-  margin-top: 6px;
-}
-.dropdown-menu .dropdown-divider {
-  margin-bottom: 8px !important;
-}
-.dropdown-menu .dropdown-item {
-  transition: all 100ms ease;
-  transition-property: background-color, color;
-  padding: 0 0.75rem !important;
-  height: 32px;
-  line-height: 32px;
-  margin: 0 8px;
-  width: initial;
-  border-radius: 8px !important;
-}
-.dropdown-menu .dropdown-item {
-  margin-bottom: 6px;
-  &:hover {
-    background-color: rgba(155, 155, 255, 0.08) !important;
+    margin-top: 6px;
+  }
+  .dropdown-divider {
+    margin-bottom: 8px !important;
+  }
+  .dropdown-item {
+    transition: all 100ms ease;
+    transition-property: background-color, color;
+    padding: 0 0.75rem !important;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 8px;
+    width: initial;
+    border-radius: 8px !important;
+    margin-bottom: 6px;
+    &:hover {
+      background-color: rgba(155, 155, 255, 0.08) !important;
+    }
   }
 }
 

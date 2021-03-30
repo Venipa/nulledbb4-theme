@@ -4,19 +4,23 @@
   "license": "GPL-3",
   "scripts": {
     "start": "npm run watch",
-    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dev": "cross-env NODE_ENV=development npx mix build",
+    "watch": "cross-env NODE_ENV=development npx mix watch",
+    "hot": "npm run watch --hot",
     "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "production": "cross-env NODE_ENV=production npx mix build -p"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "2.2.2",
     "cross-env": "^7.0.2",
-    "laravel-mix": "^5.0.4",
+    "laravel-mix": "^6.0.13",
     "node-sass-glob-importer": "^5.3.2",
+    "postcss": "8.1",
     "postcss-image-inliner": "^4.0.2",
     "resolve-url-loader": "^3.1.0",
     "sass": "^1.26.10",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "webpack-userscript": "^2.5.6"
   }
 }

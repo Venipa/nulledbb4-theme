@@ -1,6 +1,6 @@
-let mix = require('laravel-mix');
-const fs = require('fs');
-const imageInliner = require('postcss-image-inliner');
+let mix = require("laravel-mix");
+const fs = require("fs");
+const imageInliner = require("postcss-image-inliner");
 
 /*
  |--------------------------------------------------------------------------
@@ -12,26 +12,45 @@ const imageInliner = require('postcss-image-inliner');
  | file for your application, as well as bundling up your JS files.
  |
  */
-mix
-  .options({
-    processCssUrls: true,
-    postCss: [
-      imageInliner({
-        assetPaths: ['src'],
-        maxFileSize: 1024 * 1024 * 10,
-        b64Svg: true,
-        strict: false
-      })
-    ]
-  })
-mix.setPublicPath('dist');
-mix.sass('src/main.scss', 'dist/app.css');
-mix.setResourceRoot('src/');
-mix.then(() => {
-    const appCss = fs.readFileSync('dist/app.css').toString();
-    fs.writeFileSync('dist/app.user.css', `@-moz-document url-prefix("https://nulledbb.com"), url-prefix("http://nulledbb.com") {\n${appCss}\n}`);
+mix.options({
+  processCssUrls: true,
+  postCss: [
+    imageInliner({
+      assetPaths: ["src"],
+      maxFileSize: 1024 * 1024 * 10,
+      b64Svg: true,
+      strict: false,
+    }),
+  ],
 });
-global.Mix.manifest.refresh = _ => void 0;
+mix.setPublicPath("dist");
+mix.sass("src/main.scss", "dist/app.css");
+mix.setResourceRoot("src/");
+mix.browserSync({
+  proxy: "https://nulledbb.com",
+  files: ["dist/app.css"],
+  serveStatic: ["dist"],
+  snippetOptions: {
+    rule: {
+      match: /<\/head>/i,
+      fn: function(snippet, match) {
+        return (
+          '<link rel="stylesheet" type="text/css" href="/app.css"/>' +
+          snippet +
+          match
+        );
+      },
+    },
+  },
+});
+mix.then(() => {
+  const appCss = fs.readFileSync("dist/app.css").toString();
+  fs.writeFileSync(
+    "dist/app.user.css",
+    `@-moz-document regexp("^https:\\/\\/nulledbb.com[/](.*)") {\n${appCss}\n}`
+  );
+});
+global.Mix.manifest.refresh = (_) => void 0;
 // mix.webpackConfig({
 //   module: {
 //     rules: [
