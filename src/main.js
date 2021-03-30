@@ -10,9 +10,11 @@ import tippy from "tippy.js";
      */
     (el) => {
       delete el.dataset.toggle;
+      const title = el.dataset.originalTitle || el.title;
+      if (!title) return;
       tippy(el, {
         theme: "discord",
-        content: el.dataset.originalTitle || el.title,
+        content: title,
         arrow: true,
         inertia: true,
         animation: "discord-anim",
