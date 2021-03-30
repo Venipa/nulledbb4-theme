@@ -1,5 +1,5 @@
 @import "./mixins.scss";
-@import '~tippy.js/dist/tippy.css';
+@import "~tippy.js/dist/tippy.css";
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 
 body {
@@ -16,7 +16,11 @@ body {
 }
 body.forumdisplay::after,
 body.showthread::after {
-  background: linear-gradient(to bottom, transparent 75%, #0a0a0a 100%)!important;
+  background: linear-gradient(
+    to bottom,
+    rgba(#000, 0.35) 75%,
+    #0a0a0a 100%
+  ) !important;
 }
 .dropdown-menu {
   &[aria-labelledby="headerDropdownUser"] .dropdown-item:first-of-type {

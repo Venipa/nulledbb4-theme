@@ -1,7 +1,7 @@
 // ==UserScript==
     // @name         NulledBB4 - Enhancements
     // @namespace    https://venipa.net/
-    // @version      0.1
+    // @version      0.1.11
     // @description  replaces some jquery stuff with better stuff
     // @author       Venipa <admin@venipa.net>
     // @match        https://nulledbb.com/*

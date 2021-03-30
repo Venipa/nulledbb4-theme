@@ -1,6 +1,7 @@
 let mix = require("laravel-mix");
 const fs = require("fs");
 const imageInliner = require("postcss-image-inliner");
+const pkgModules = require('./packageModules.json');
 
 /*
  |--------------------------------------------------------------------------
@@ -50,10 +51,10 @@ mix.then(() => {
   fs.writeFileSync(
     "dist/app.user.css",
     `/* ==UserStyle==
-@name         NulledBB 4 - Theme
+@name         ${pkgModules.usercss.name}
 @namespace    venipa.net
 @author       Venipa <admin@venipa.net>
-@version      0.1.1
+@version      ${pkgModules.usercss.version}
 @license      MIT
 @updateUrl    https://venipa.github.io/nulledbb4-theme/dist/app.user.css
 @preprocessor default
@@ -64,9 +65,9 @@ mix.then(() => {
   fs.writeFileSync(
     "dist/app.user.js",
     `// ==UserScript==
-    // @name         NulledBB4 - Enhancements
+    // @name         ${pkgModules.userscript.name}
     // @namespace    https://venipa.net/
-    // @version      0.1
+    // @version      ${pkgModules.userscript.version}
     // @description  replaces some jquery stuff with better stuff
     // @author       Venipa <admin@venipa.net>
     // @match        https://nulledbb.com/*
