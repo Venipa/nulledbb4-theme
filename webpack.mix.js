@@ -30,6 +30,7 @@ mix.browserSync({
   proxy: "https://nulledbb.com",
   files: ["dist/app.css"],
   serveStatic: ["dist"],
+  https: true,
   snippetOptions: {
     rule: {
       match: /<\/head>/i,
