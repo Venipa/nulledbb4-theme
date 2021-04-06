@@ -247,7 +247,7 @@ body.showthread::after {
     & > div.post:first-of-type {
       background-image: linear-gradient(
         to bottom,
-        #00000000 62.5%,
+        var(--bg-base) 62.5%,
         var(--bg-secondary)
       );
       box-shadow: none;
