@@ -10,9 +10,10 @@ body {
   --bg-quaternary: #19191f;
   --bg-tertiary: #14141a;
   --bg-secondary: #14141a;
+  --bg-base: #0a0a0a;
 }
 body {
-  background-color: #0a0a0a;
+  background-color: var(--bg-base);
 }
 body.forumdisplay::after,
 body.showthread::after {
@@ -214,31 +215,65 @@ body.showthread::after {
     @media (min-width: map-get($breakpoints, "mobile")) {
       &:before {
         content: "";
-        width: 400px;
+        width: 110px;
         max-width: 80%;
-        height: 52px;
+        height: 110px;
         box-shadow: 0 16px 42px -10px currentColor,
-          0 25px 14px -18px currentColor;
+          0 25px 14px -24px currentColor;
         border-radius: 100%;
         margin: 18px auto 0;
         position: absolute;
         transform: rotate(180deg);
-        top: 42px;
+        top: 32px;
         left: 0;
         right: 0;
         z-index: -1;
       }
     }
   }
-  .post-avatar {
-    img {
-      @media (min-width: map-get($breakpoints, "mobile")) {
-        display: block;
-        background-color: var(--bg-quaternary);
-        height: 140px;
-        width: 140px;
+}
+.post-avatar {
+  img {
+    @media (min-width: map-get($breakpoints, "mobile")) {
+      display: block;
+      height: 110px !important;
+      width: 110px !important;
+      border-radius: 110px !important;
+    }
+  }
+}
+#posts {
+  @media (min-width: map-get($breakpoints, "mobile")) {
+    & > div.post:first-of-type {
+      background-image: linear-gradient(
+        to bottom,
+        #00000000 62.5%,
+        var(--bg-secondary)
+      );
+      box-shadow: none;
+      @media (min-width: map-get($breakpoints, "lg")) {
+        footer .postbit-background.desktop::before {
+          background: linear-gradient(to bottom, transparent, var(--bg-base));
+        }
+      }
+      .post-signature {
+        border: 0;
+        max-height: 320px;
+      }
+      main,
+      footer,
+      .main-row {
+        background: transparent !important;
       }
     }
+  }
+}
+.post-signature {
+  iframe,
+  img,
+  video,
+  audio {
+    border-radius: var(--rounded);
   }
 }
 .tippy-box[data-theme="discord"] {
@@ -289,6 +324,7 @@ body.showthread::after {
     }
   }
 }
-.main-row, .forum-row {
+.main-row,
+.forum-row {
   position: relative;
 }
