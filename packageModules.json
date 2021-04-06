@@ -1,10 +1,10 @@
 {
   "usercss": {
     "name": "NulledBB 4 - Theme",
-    "version": "0.1.21"
+    "version": "0.1.22"
   },
   "userscript": {
     "name": "NulledBB4 - Enhancements",
-    "version": "0.1.12"
+    "version": "0.1.13"
   }
 }

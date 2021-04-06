@@ -39,4 +39,15 @@ import tippy from "tippy.js";
       });
     }
   })
+  document.querySelectorAll(`.spoiler`).forEach(
+    /**
+     * 
+     * @param {HTMLElement} el 
+     */
+    el => {
+    el.onclick = (ev) => {
+      ev.stopPropagation();
+      el.classList[!el.classList.contains('spoiler-revealed') ? 'add' : 'remove']('spoiler-revealed');
+    }
+  })
 })();

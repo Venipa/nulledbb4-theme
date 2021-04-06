@@ -252,8 +252,9 @@ body.showthread::after {
       );
       box-shadow: none;
       @media (min-width: map-get($breakpoints, "lg")) {
-        footer .postbit-background.desktop::before {
-          background: linear-gradient(to bottom, transparent, var(--bg-base));
+        footer .postbit-background.desktop::before,
+        footer::before {
+          background: linear-gradient(to bottom, rgba(#000, 0), var(--bg-base));
         }
       }
       .post-signature {
