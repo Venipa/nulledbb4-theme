@@ -48,7 +48,7 @@ import tippy from "tippy.js";
     el.onclick = (ev) => {
       ev.stopPropagation();
       const isRevealed = el.classList.contains('spoiler-revealed');
-      if (el._tippy && isRevealed !== el._tippy.state.isEnabled) el._tippy[isRevealed ? 'disable' : 'enable']();
+      if (el._tippy && isRevealed !== el._tippy.state.isEnabled) el._tippy[!isRevealed ? 'disable' : 'enable']();
       el.classList[!isRevealed ? 'add' : 'remove']('spoiler-revealed');
     }
   })
