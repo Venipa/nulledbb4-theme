@@ -30,14 +30,15 @@ mix.sass("src/main.scss", "dist/app.css");
 mix.setResourceRoot("src/");
 mix.browserSync({
   proxy: "https://nulledbb.com",
-  files: ["dist/app.css"],
+  files: ["dist/app.css", "dist/app.js"],
   serveStatic: ["dist"],
   https: true,
   snippetOptions: {
+    async: true,
     rule: {
       match: /<\/head>/i,
       fn: function (snippet, match) {
-        return (`<link rel="stylesheet" type="text/css" href="/app.css" />
+        return (`<link rel="stylesheet" type="text/css" href="/app.css">
         <script src="/app.js" type="text/javascript"></script>` +
           snippet +
           match
