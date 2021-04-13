@@ -43,6 +43,7 @@ $(function () {
       });
     }
   });
+  $(`[data-toggle="tooltip"]`).tooltip();
   document.querySelectorAll(`.spoiler`).forEach(
     /**
      *
