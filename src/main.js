@@ -28,22 +28,19 @@ $(function () {
     });
   };
   $("a").each((index, el) => {
-    if (
-      el.href &&
-      !el.href.startsWith(location.origin) &&
-      !el.href.startsWith("/") &&
-      el.href.startsWith("http") &&
-      !el._tippy
-    ) {
+    if (el.href && !el.href.startsWith(location.origin) && !el.href.startsWith("/") && el.href.startsWith("http") && !el._tippy) {
       const url = new URL(el.href);
       $(el).tooltip(null, {
-        content: `Visit ${url.hostname}${
-          url.pathname === "/" ? "" : url.pathname
-        }${url.search || ""}`,
+        content: `Visit ${url.hostname}${url.pathname === "/" ? "" : url.pathname}${url.search || ""}`,
       });
     }
   });
   $(`[data-toggle="tooltip"]`).tooltip();
+  $(`#recentthreads li>a.truncate`).each((_, el) => {
+    $(el).tooltip(null, {
+      content: el.innerText,
+    });
+  });
   document.querySelectorAll(`.spoiler`).forEach(
     /**
      *
@@ -53,8 +50,7 @@ $(function () {
       el.onclick = (ev) => {
         ev.stopPropagation();
         const isRevealed = el.classList.contains("spoiler-revealed");
-        if (el._tippy && isRevealed !== el._tippy.state.isEnabled)
-          el._tippy[!isRevealed ? "disable" : "enable"]();
+        if (el._tippy && isRevealed !== el._tippy.state.isEnabled) el._tippy[!isRevealed ? "disable" : "enable"]();
         el.classList[!isRevealed ? "add" : "remove"]("spoiler-revealed");
       };
     }
