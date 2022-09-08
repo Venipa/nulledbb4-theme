@@ -36,11 +36,23 @@ $(function () {
     }
   });
   $(`[data-toggle="tooltip"]`).tooltip();
-  $(`#recentthreads li>a.truncate`).each((_, el) => {
-    $(el).tooltip(null, {
-      content: el.innerText,
+  const recentThreadsTooltips = () => {
+    $(`#recentthreads li>a.truncate`).each((_, el) => {
+      try {
+        const p = $(el).parent();
+        p.tooltip(null, {
+          content: el.innerText,
+        });
+      } catch {}
     });
-  });
+  };
+  recentThreadsTooltips();
+  const recentThreadsObserverHandle = (records) => {
+    if (records.length <= 0) return;
+    recentThreadsTooltips();
+  };
+  const recentThreadsObserver = new MutationObserver(recentThreadsObserverHandle);
+  recentThreadsObserver.observe(document.querySelector("#recentthreads"));
   document.querySelectorAll(`.spoiler`).forEach(
     /**
      *
