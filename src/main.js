@@ -54,7 +54,7 @@ $(function () {
     recentThreadsTooltips();
   };
   const recentThreadsObserver = new MutationObserver(recentThreadsObserverHandle);
-  recentThreadsObserver.observe(document.querySelector("#recentthreads"));
+  recentThreadsObserver.observe(document.querySelector("#recentthreads"), { childList: true });
   document.querySelectorAll(`.spoiler`).forEach(
     /**
      *
