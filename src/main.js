@@ -46,7 +46,9 @@ $(function () {
       } catch {}
     });
   };
-  recentThreadsTooltips();
+  document.addEventListener("DOMContentLoaded", () => {
+    recentThreadsTooltips();
+  });
   const recentThreadsObserverHandle = (records) => {
     if (records.length <= 0) return;
     recentThreadsTooltips();
