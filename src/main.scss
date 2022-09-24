@@ -209,7 +209,7 @@ body.showthread::after {
     }
   }
 }
-.post-user {
+.post-user:has(.post-avatar>img[src^="https"]) {
   position: relative;
   .post-username .usergroup > span {
     @media (min-width: map-get($breakpoints, "mobile")) {
