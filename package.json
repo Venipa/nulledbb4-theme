@@ -16,7 +16,7 @@
     "cross-env": "^7.0.2",
     "laravel-mix": "^6.0.13",
     "node-sass-glob-importer": "^5.3.2",
-    "postcss": "8.1",
+    "postcss": "8.2",
     "postcss-image-inliner": "^4.0.2",
     "resolve-url-loader": "^3.1.0",
     "sass": "^1.26.10",
